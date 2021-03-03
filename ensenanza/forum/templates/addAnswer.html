@@ -7,20 +7,55 @@
 <link rel="stylesheet" href="{% static 'btb.css' %}">
 <link rel="stylesheet" href="{% static 'login.css' %}">
 <link rel="stylesheet" href="{% static 'forumLanding.css' %}">
-<h2>{{question.title}}</h2>
+<br>
+<br>
+<br>
+<br>
+<br>
 
+
+<!--<div class="container-fluid">
 <br>
 <p>{{error_message}}</p>
 <br>
-
-<form method="post" action="">
+</div>
+<div class="container-fluid">
+<div class="card card-signin my-5 mx-auto d-block" style="background-color: #fff; border-radius: 20px; background: linear-gradient(to right, #ebebeb, #f1f1f1);">
+<form method="post" action="" class="form-signin">
     {% csrf_token %}
+    
+    <label for="body" class="form-label-group">Your Answer: </label><br>
+    <textarea id="body" name="body" rows="10" cols="100" class="form-control" required></textarea><br>
 
-    <label for="body">Your Answer: </label><br>
-    <textarea id="body" name="body" rows="10" cols="100" required></textarea><br>
-
-    <button type="submit">Add Answer</button>
+    <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" style="font-size: 1rem;">Add Answer</button>
 
 </form>
+</div>-->
 
+
+<div class="container">
+    <div class="row">
+        <div class="mx-auto d-block float-left">
+            <div class="card card-signin my-5 mx-auto d-block" style="background-color: #fff; border-radius: 20px; background: linear-gradient(to right, #ebebeb, #f1f1f1);">
+                <div class="card-body">
+                    <h4 class=" text-center" ><strong>{{question.title}}</strong></h4>
+                    <h6 class="text-center" >{{question.body}}</h6>
+                    <div>
+                        <h6>{{error_message}}</h6>
+                    </div>
+                        <form class="form-signin" action="" method="post">
+                            {% csrf_token %}
+
+                            <label for="body" class="form-label-group">Your Answer</label>
+                            <textarea id="body" name="body" rows="10" cols="100"  type="text" class="form-control" required style="border-radius: 20px; font-size: 14px;">
+                            </textarea><br>
+  
+
+                            <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" style="font-size: 1rem;">Add Answer</button>
+                        </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
