@@ -52,23 +52,23 @@
         "Class": 10,
         "Medium": "English",
         "Subject": "Hindi",
-        "Chapter": "Bharat Mhamma",
-        "Location": "/ques/english/LH_C1.json"
+        "Chapter": "Grammar - Sentence distinction(वाक्य भेद)",
+        "Location": "/ques/english/LH_G1.json"
     },
     {
         "Board": "SSC",
         "Class": 10,
         "Medium": "English",
         "Subject": "Marathi",
-        "Chapter": "You give wisdom (prayer) - Guru Thakur ",
-        "Location": "/ques/english/MH_C1.json"
+        "Chapter": "Grammar",
+        "Location": "/ques/english/MH_G1.json"
     },
     {
         "Board": "SSC",
         "Class": 10,
         "Medium": "English",
         "Subject": "English",
-        "Chapter": "Grammar - Tenses ",
-        "Location": "/ques/english/E_C1.json"
+        "Chapter": "Grammar - Tenses",
+        "Location": "/ques/english/E_G1.json"
     }
 ]
