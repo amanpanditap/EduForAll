@@ -1,0 +1,74 @@
+[
+    {
+        "Board": "SSC",
+        "Class": 10,
+        "Medium": "English",
+        "Subject": "Mathematics Part 1",
+        "Chapter": "Linear Equations in Two Variables",
+        "Location": "/ques/english/M1_C1.json"
+    },
+    {
+        "Board": "SSC",
+        "Class": 10,
+        "Medium": "English",
+        "Subject": "Mathematics Part 2",
+        "Chapter": "Similarity",
+        "Location": "/ques/english/M2_C1.json"
+    },
+    {
+        "Board": "SSC",
+        "Class": 10,
+        "Medium": "English",
+        "Subject": "Science & Technology Part 1",
+        "Chapter": "Gravitation",
+        "Location": "/ques/english/S1_C1.json"
+    },
+    {
+        "Board": "SSC",
+        "Class": 10,
+        "Medium": "English",
+        "Subject": "Science & Technology Part 2",
+        "Chapter": "Heredity and Evolution",
+        "Location": "/ques/english/S2_C1.json"
+    },
+    {
+        "Board": "SSC",
+        "Class": 10,
+        "Medium": "English",
+        "Subject": "History and Political Science",
+        "Chapter": "Historiography : Development in the West",
+        "Location": "/ques/english/H_C1.json"
+    },
+    {
+        "Board": "SSC",
+        "Class": 10,
+        "Medium": "English",
+        "Subject": "Geography",
+        "Chapter": "Field Visit",
+        "Location": "/ques/english/G_C1.json"
+    },
+    {
+        "Board": "SSC",
+        "Class": 10,
+        "Medium": "English",
+        "Subject": "Hindi",
+        "Chapter": "Bharat Mhamma",
+        "Location": "/ques/english/LH_C1.json"
+    },
+    {
+        "Board": "SSC",
+        "Class": 10,
+        "Medium": "English",
+        "Subject": "Marathi",
+        "Chapter": "You give wisdom (prayer) - Guru Thakur ",
+        "Location": "/ques/english/MH_C1.json"
+    },
+    {
+        "Board": "SSC",
+        "Class": 10,
+        "Medium": "English",
+        "Subject": "English",
+        "Chapter": "Grammar - Tenses ",
+        "Location": "/ques/english/E_C1.json"
+    }
+]

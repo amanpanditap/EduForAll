@@ -1,0 +1,71 @@
+[{
+    "question_string": "___________ wrote the book entitled, 'Archaeologyof Knowldege'.",
+    "choices": {
+      "correct": "Michel Foucault",
+      "wrong": ["Voltaire", "Karl Marx", "Lucien Febvre"]
+    }
+  }, 
+  {
+    "question_string": "A scholar who writes critical historical narrative is known as critical historical narrative is known",
+    "choices": {
+      "correct": "historian",
+      "wrong": ["archaeologist", "social scientist", "language expert"]
+    }
+  }, 
+  {
+    "question_string": "The earliest inscription in the world is displayed at a museum in",
+    "choices": {
+      "correct": "France",
+      "wrong": ["England", "Germany", "Portugal"]
+    }
+  }, 
+  {
+    "question_string": "It may be said that __________ was the founder of modern historiography.",
+    "choices": {
+      "correct": "Voltaire",
+      "wrong": ["René Descartees", "Karl Marx", "Leopold Ranké"]
+    }
+  },
+  {
+      "question_string": "__________ a Greek historian of the fifth century B.C.E., had used the term History for the first time for his book entitled, 'The Histories'.",
+      "choices": {
+        "correct": "Herodotus",
+        "wrong": ["Leopold Ranké", "Georg Hegel", "Michael Foucault"]
+      }
+    },
+    {
+      "question_string": "In 1737 C.E. the _______ university in Germany had an independeent department for history. ",
+      "choices": {
+        "correct": "Gottingen",
+        "wrong": ["Oxford", "Cambridge", "Stanford"]
+      }
+    },
+    {
+      "question_string": "Historiography of the nineteenth century was greatly influenced by the thoughts of __________",
+      "choices": {
+        "correct": "Leopold von Ranké",
+        "wrong": ["Karl Marx", "Voltaire", "Georg Hegel"]
+      }
+    },
+    {
+      "question_string": "A new school of historiography arose in France known as ________ school.",
+      "choices": {
+        "correct": "Annales",
+        "wrong": ["Nationalism", "Communist", "Translation"]
+      }
+    },
+    {
+      "question_string": "_________ has made the government more transparent.",
+      "choices": {
+        "correct": "Right to Information",
+        "wrong": ["Equality", "Freedom", "Social Justice"]
+      }
+    },
+    {
+      "question_string": "The essence of democracy is ______.",
+      "choices": {
+        "correct": "Decentralization of power",
+        "wrong": ["Universal adult franchise", "Policy of reservation of seats", "Judicial decisions"]
+      }
+    }
+  ]
