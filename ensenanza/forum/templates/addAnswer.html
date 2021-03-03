@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Ensenanza - Add Answer{% endblock %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'all.css' %}">
+<link rel="stylesheet" href="{% static 'bt.css' %}">
+<link rel="stylesheet" href="{% static 'btb.css' %}">
+<link rel="stylesheet" href="{% static 'login.css' %}">
+<link rel="stylesheet" href="{% static 'forumLanding.css' %}">
+<h2>{{question.title}}</h2>
+
+<br>
+<p>{{error_message}}</p>
+<br>
+
+<form method="post" action="">
+    {% csrf_token %}
+
+    <label for="body">Your Answer: </label><br>
+    <textarea id="body" name="body" rows="10" cols="100" required></textarea><br>
+
+    <button type="submit">Add Answer</button>
+
+</form>
+
+{% endblock %}

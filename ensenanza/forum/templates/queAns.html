@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Ensenanza - Forum Question{% endblock %}
+{% block content %}
+
+<div class="container-fluid">
+    <br>
+    <h2>{{ question.title }}</h2>
+    <h5>By {{question.questionBy.user.first_name}} {{ question.questionBy.user.last_name }}</h5>
+    <br>
+
+    <br>
+    <a href="{% url 'forum:addAnswer' question.id %}">Add an Answer.</a>
+    <br>
+
+    <h4>All Answers: </h4>
+
+    {% for i in answers %}
+
+    <br>
+    <hr>
+    <h6>{{i.answerBy.user.first_name}} {{i.answerBy.user.last_name}}</h6>
+    <p>{{ i.body }}</p>
+    <hr>
+    <br>
+</div>
+
+{% endfor %}
+{% endblock %}

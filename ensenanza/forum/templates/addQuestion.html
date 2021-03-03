@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Ensenanza - Forum{% endblock %}
+{% block content %}
+
+<h3>Add a Question:</h3>
+<br>
+<h4>{{error_message}}</h4>
+<br>
+
+<form method="post" action="">
+    {% csrf_token %}
+    <label for="title">Enter Question Title: </label>
+    <input type="text" name="title" id="title" required><br>
+
+    <label for="medium">Choose Question Medium: </label>
+    <select name="medium" id="medium" required>
+        <option value="english">English</option>
+        <option value="hindi">Hindi</option>
+        <option value="marathi">Marathi</option>
+    </select><br>
+
+
+    <label for="acadYear">Choose Question Year: </label>
+    <select name="acadYear" id="acadYear" required>
+        <option value="1">First Standard</option>
+        <option value="2">Second Standard</option>
+        <option value="3">Third Standard</option>
+        <option value="4">Fourth Standard</option>
+        <option value="5">Fifth Standard</option>
+        <option value="6">Sixth Standard</option>
+        <option value="7">Seventh Standard</option>
+        <option value="8">Eighth Standard</option>
+        <option value="9">Ninth Standard</option>
+        <option value="10">Tenth Standard</option>
+    </select><br>
+
+    <label for="subject">Choose Question Subject: </label>
+    <select name="subject" id="subject" required>
+        <option value="English">English</option>
+        <option value="Hindi">Hindi</option>
+        <option value="Marathi">Marathi</option>
+        <option value="History">History</option>
+        <option value="Geography">Geography</option>
+        <option value="Algebra">Algebra</option>
+        <option value="Geometry">Geometry</option>
+        <option value="Science">Science</option>
+        <option value="Other">Other</option>
+    </select><br>
+
+    <label for="board">Choose Your Board: </label>
+    <select name="board" id="board" required class="form-control" style="border-radius: 20px; font-size: 15px;">
+        <option value="SSC">SSC</option>
+        <option value="CBSE">CBSE</option>
+        <option value="ICSE">ICSE</option>
+    </select><br>
+
+    <label for="body">Describe your Question: </label><br>
+    <textarea id="body" name="body" rows="10" cols="100"></textarea><br>
+
+    <button type="submit">Add Question</button>
+
+</form>
+
+
+{% endblock %}
