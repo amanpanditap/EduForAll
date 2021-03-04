@@ -9,6 +9,7 @@ from django.http import HttpResponseRedirect
 from django.contrib.auth.models import User
 from forum.models import answer, question, student
 
+
 class landingPage(View):
 
     def get(self, request, template_name='landingPage.html'):
@@ -63,7 +64,8 @@ class register(View):
                 newStudent = student(user=user, medium=medium, acadYear=acadYear, board=board)
                 newStudent.save()
                 args["error_message"] = "Successfully Registered. Please Login."
-                return render(request, template_name, args)
+                return redirect('Login')
+                
         else:
             args["error_message"] = "Passwords Don't Match. Please Try Again."
             return render(request, template_name, args)

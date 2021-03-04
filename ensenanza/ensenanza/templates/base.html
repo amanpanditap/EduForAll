@@ -55,6 +55,7 @@
               <p style="font-size:1.1rem; padding-top:1%">{{user.first_name}} {{user.last_name}}</p>
               <p style="font-size:1.1rem; padding-top:1%; margin-left: 2%;"><a href="{% url 'Logout' %}">Logout</a></p>
               {% else %}
+              <p style="font-size:1.1rem; padding-top:1%; margin-left: 2%;"><a href="{% url 'register' %}"><span style="color:blue">Register</a></p>
               <p style="font-size:1.1rem; padding-top:1%; margin-left: 2%;"><a href="{% url 'Login' %}"><span style="color:blue">Login</a></p>
               {% endif %}
             </div>
