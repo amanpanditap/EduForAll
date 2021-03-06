@@ -54,20 +54,20 @@
 }
 .column{
     padding: 0;
-    border: 2px solid #d5ebfc;
+    border: 2px solid #000000;
     border-radius: 20px;
     margin: 0.5%;
 }
 .contactus{
     text-align: center;
-    color: #f1e5e5;
+    color: #000000;
     font-family: 'Arvo', serif;
     font-size: 2.2rem;
     padding-bottom: 1.5%;
 }
 .cont{
     text-align: center;
-    color: #d9d1f8;
+    color: #000000;
     padding-top: 1%;
     font-family: 'Nunito', sans-serif;
     font-size: 1.9rem;
@@ -77,16 +77,16 @@
     text-align: center;
     font-size: 1.8rem;
     font-family: 'Alegreya', serif;
-    color: #e1e2f5;
+    color: #000000;
     text-decoration: underline;
 }
 .ghhh{
     text-align: center;
     font-family: 'Nunito', sans-serif;
-    color: #e1e2f5;
+    color: #000000;
 }
 .college{
     text-align: center;
-    color: #fcfcfc;
+    color: #000000;
     font-family: 'Arvo', serif;
 }
