@@ -155,7 +155,18 @@ checkMyAnswers = () => {
       }
     }
   }
-  console.log(givenAnswers);
-  console.log(answerList);
 
+
+  correctAnswers = 0;
+  for(let i = 0; i < answerList.length; i++) {
+    if(givenAnswers[i]==answerList[i]) {
+      correctAnswers += 1;
+    }
+  }
+
+  content = `
+  <h2>Your Score: ${correctAnswers}/${answerList.length}</h2>
+  `;
+
+  document.querySelector("#displayQuestions").innerHTML = content;
 }
