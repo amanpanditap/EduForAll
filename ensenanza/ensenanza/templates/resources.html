@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Ensenanza - Forum{% endblock %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'all.css' %}">
+<link rel="stylesheet" href="{% static 'bt.css' %}">
+<link rel="stylesheet" href="{% static 'btb.css' %}">
+<link rel="stylesheet" href="{% static 'login.css' %}">
+<link rel="stylesheet" href="{% static 'forumLanding.css' %}">
+
+<br><br><br><br><br>
+<h1 style="text-align:center; color: #242020">Resources</h1>
+<br>
+<div class="container-fluid">
+
+    <div class="container-fluid" style="padding: 10px; border: 2px solid; border-radius: 20px;">
+        <div class="row">
+            <div class="col-lg-3">
+                <select name="board" id="board" required class="form-control"
+                            style="border-radius: 20px; font-size: 15px; margin-bottom: 5px;">
+                            <option value="SSC">SSC</option>
+                            <option value="CBSE">CBSE</option>
+                            <option value="ICSE">ICSE</option>
+                </select>
+            </div>
+            <div class="col-lg-3">
+                <select name="medium" id="medium" required class="form-control"
+                            style="border-radius: 20px; font-size: 15px; margin-bottom: 5px;">
+                            <option value="English">English</option>
+                            <option value="Hindi">Hindi</option>
+                            <option value="Marathi">Marathi</option>
+                </select>
+            </div>
+            <div class="col-lg-4">
+                <select name="acadYear" id="acadYear" required style="border-radius: 20px; font-size: 15px; margin-bottom: 5px;"
+                            class="form-control">
+                            <option value="1">First Standard</option>
+                            <option value="2">Second Standard</option>
+                            <option value="3">Third Standard</option>
+                            <option value="4">Fourth Standard</option>
+                            <option value="5">Fifth Standard</option>
+                            <option value="6">Sixth Standard</option>
+                            <option value="7">Seventh Standard</option>
+                            <option value="8">Eighth Standard</option>
+                            <option value="9">Ninth Standard</option>
+                            <option value="10">Tenth Standard</option>
+                        </select>
+            </div>
+            <!--
+            <div class="col-lg-3">
+                <select name="subject" id="subject" required style="border-radius: 20px; font-size: 15px; margin-bottom: 5px;"
+                class="form-control">
+                    <option value="English">English</option>
+                    <option value="Hindi">Hindi</option>
+                    <option value="Marathi">Marathi</option>
+                    <option value="History">History</option>
+                    <option value="Geography">Geography</option>
+                    <option value="Algebra">Algebra</option>
+                    <option value="Geometry">Geometry</option>
+                    <option value="Science">Science</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>-->
+            <div class="col-lg-2">
+                <button class="btn btn-primary btn-block text-uppercase" onclick="getBooks()" style="font-size: 1rem; padding: 4%; border-radius: 20px;">Search</button>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="row" id="wantedBooks">
+
+
+
+    </div>
+
+
+</div>
+<script src="{% static 'resources.js'%}"></script>
+{% endblock %}
