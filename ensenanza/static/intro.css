@@ -90,3 +90,11 @@
     color: #000000;
     font-family: 'Arvo', serif;
 }
+.footer{
+    text-align: center;
+    padding-bottom: 0.7%;
+    padding-top: 0.3%;
+    background: #26caaf;
+    color: rgb(0, 0, 0);
+    font-family: 'Alegreya', serif;
+}

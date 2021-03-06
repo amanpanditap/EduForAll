@@ -1,28 +1,40 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %}Ensenanza - Forum{% endblock %}
+{% block title %}Ensenanza - Add Question{% endblock %}
 {% block content %}
-
-<h3>Add a Question:</h3>
+<link rel="stylesheet" href="{% static 'all.css' %}">
+<link rel="stylesheet" href="{% static 'bt.css' %}">
+<link rel="stylesheet" href="{% static 'btb.css' %}">
+<link rel="stylesheet" href="{% static 'login.css' %}">
+<link rel="stylesheet" href="{% static 'forumLanding.css' %}">
 <br>
-<h4>{{error_message}}</h4>
 <br>
+<br>
+<br>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="mx-auto d-block float-left">
+            <div class="card card-signin my-5 mx-auto d-block" style="background-color: #fff; border-radius: 20px; background: linear-gradient(to right, #ebebeb, #f1f1f1);">
+                <div class="card-body">
+                        <h6>{{error_message}}</h6>
+                    
+                        <form class="form-signin" action="" method="post">
+                            {% csrf_token %}
 
-<form method="post" action="">
-    {% csrf_token %}
-    <label for="title">Enter Question Title: </label>
-    <input type="text" name="title" id="title" required><br>
+                            <label for="title" class="form-label-group" style="color: #312b26;">Enter Question Title: </label>
+                            <input type="text" name="title" id="title" class="form-control" style="border-radius: 20px; font-size: 15px;" required><br>
 
-    <label for="medium">Choose Question Medium: </label>
-    <select name="medium" id="medium" class = "form-select" required>
-        <option value="english">English</option>
-        <option value="hindi">Hindi</option>
-        <option value="marathi">Marathi</option>
+                            <label for="medium" class="form-label-group" style="color: #312b26;">Choose Question Medium: </label>
+    <select name="medium" id="medium" class="form-control form-select" style="border-radius: 20px; font-size: 15px;" required>
+        <option value="english" class="form-control">English</option>
+        <option value="hindi" class="form-label-group">Hindi</option>
+        <option value="marathi" class="form-label-group">Marathi</option>
     </select><br>
 
 
-    <label for="acadYear">Choose Question Year: </label>
-    <select name="acadYear" id="acadYear" required class = "form-select">
+    <label for="acadYear" class="form-label-group" style="color: #312b26;">Choose Question Year: </label>
+    <select name="acadYear" id="acadYear" required class="form-control form-select" style="border-radius: 20px; font-size: 15px;">
         <option value="1">First Standard</option>
         <option value="2">Second Standard</option>
         <option value="3">Third Standard</option>
@@ -35,8 +47,8 @@
         <option value="10">Tenth Standard</option>
     </select><br>
 
-    <label for="subject">Choose Question Subject: </label>
-    <select name="subject" id="subject" required class = "form-select">
+    <label for="subject" class="form-label-group" style="color: #312b26;">Choose Question Subject: </label>
+    <select name="subject" id="subject" required class="form-control form-select" style="border-radius: 20px; font-size: 15px;">
         <option value="English">English</option>
         <option value="Hindi">Hindi</option>
         <option value="Marathi">Marathi</option>
@@ -48,19 +60,24 @@
         <option value="Other">Other</option>
     </select><br>
 
-    <label for="board">Choose Your Board: </label>
+    <label for="board" class="form-label-group" style="color: #312b26;">Choose Your Board: </label>
     <select name="board" id="board" required class="form-control form-select" style="border-radius: 20px; font-size: 15px;">
         <option value="SSC">SSC</option>
         <option value="CBSE">CBSE</option>
         <option value="ICSE">ICSE</option>
     </select><br>
 
-    <label for="body">Describe your Question: </label><br>
-    <textarea id="body" name="body" rows="10" cols="100"></textarea><br>
+    <label for="body" class="form-label-group" style="color: #312b26;">Describe your Question: </label><br>
+    <textarea id="body" name="body" rows="10" cols="100"  type="text" class="form-control" required style="border-radius: 20px; font-size: 14px;"></textarea><br>
 
-    <button type="submit">Add Question</button>
+                           
+  
 
-</form>
-
-
+                            <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" style="font-size: 1rem;">Add Question</button>
+                        </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
