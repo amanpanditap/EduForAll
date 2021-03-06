@@ -78,3 +78,8 @@ class Syllabus(View):
     
     def get(self, request):
         return render(request, 'syllabus.html')
+
+class Tests(View):
+    
+    def get(self, request):
+        return render(request, 'tests.html')
