@@ -3,9 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>{% block title %}
-
-        {% endblock %}</title>
+    <title>Edu.f.All</title>
     <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -13,22 +11,24 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="HandheldFriendly" content="true">
-
+  <link rel="stylesheet" href="{% static 'all.css' %}">
+  <link rel="stylesheet" href="{% static 'bt.css' %}">
+  <link rel="stylesheet" href="{% static 'btb.css' %}">
+  <link rel="stylesheet" href="{% static 'boi1.css' %}">
+  <link rel="stylesheet" href="{% static 'intro.css' %}">
+  <link rel="stylesheet" href="{% static 'testimonial.css' %}">
+  <link rel="stylesheet" href="{% static 'login.css' %}">
 </head>
 
 <body>
-    <link rel="stylesheet" href="{% static 'all.css' %}">
-    <link rel="stylesheet" href="{% static 'bt.css' %}">
-    <link rel="stylesheet" href="{% static 'btb.css' %}">
-    <link rel="stylesheet" href="{% static 'boi1.css' %}">
     <!-- ======= Header ======= -->
     <header id="header" class="fixed-top">
         
           
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="{% url 'landingPage' %}">
                 <img src="{% static 'book.png' %}" width="30" height="30" class="d-inline-block align-top" alt="">
-                EducationForAll
+                EduForAll
               </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -38,15 +38,15 @@
               <ul class="navbar-nav mr-auto">
                 
                 <li class="nav-item">
-                  <a class="nav-link" href="{% url 'forum:forumLanding' %}" style="margin-left: 2%;">Forum</a>
+                  <a class="nav-link" href="{% url 'forum:forumLanding' %}" style="margin-left: 2%;"><span style="color:rgb(0, 0, 0)">Forum</a>
                 </li>
                 
                 <li class="nav-item">
-                    <a class="nav-link" href="#" style="margin-left: 2%;">Tests</a>
+                    <a class="nav-link" href="#" style="margin-left: 2%;"><span style="color:rgb(0, 0, 0)">Tests</a>
                 </li>
                 
                 <li class="nav-item">
-                    <a class="nav-link" href="#" style="margin-left: 2%;">Resources</a>
+                    <a class="nav-link" href="{% url 'Syllabus' %}" style="margin-left: 2%;"><span style="color:rgb(0, 0, 0)">Syllabus</a>
                 </li>
 
               </ul>

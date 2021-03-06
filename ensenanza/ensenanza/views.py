@@ -73,3 +73,8 @@ class register(View):
 def Logout(request):
     logout(request)
     return redirect('/')
+
+class Syllabus(View):
+    
+    def get(self, request):
+        return render(request, 'syllabus.html')

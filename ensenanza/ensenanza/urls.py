@@ -25,6 +25,7 @@ urlpatterns = [
     path('login', views.Login.as_view(), name='Login'),
     path('register', views.register.as_view(), name='register'),
     path('logout', views.Logout, name='Logout'),
+    path('syllabus', views.Syllabus.as_view(), name='Syllabus'),
     path('forum/',include('forum.urls',namespace='forum')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
