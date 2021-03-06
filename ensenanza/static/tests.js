@@ -6,7 +6,7 @@ const allTests = [
         "Medium": "English",
         "Subject": "Mathematics Part 1",
         "Chapter": "Linear Equations in Two Variables",
-        "Location": "/ques/english/M1_C1.json"
+        "Location": "images/ques/english/M1_C1.json"
     },
     {
         "id": 2,
@@ -15,7 +15,7 @@ const allTests = [
         "Medium": "English",
         "Subject": "Mathematics Part 2",
         "Chapter": "Similarity",
-        "Location": "/ques/english/M2_C1.json"
+        "Location": "images/ques/english/M2_C1.json"
     },
     {
         "id": 3,
@@ -24,7 +24,7 @@ const allTests = [
         "Medium": "English",
         "Subject": "Science & Technology Part 1",
         "Chapter": "Gravitation",
-        "Location": "/ques/english/S1_C1.json"
+        "Location": "images/ques/english/S1_C1.json"
     },
     {
         "id": 4,
@@ -33,7 +33,7 @@ const allTests = [
         "Medium": "English",
         "Subject": "Science & Technology Part 2",
         "Chapter": "Heredity and Evolution",
-        "Location": "/ques/english/S2_C1.json"
+        "Location": "images/ques/english/S2_C1.json"
     },
     {
         "id": 5,
@@ -42,7 +42,7 @@ const allTests = [
         "Medium": "English",
         "Subject": "History and Political Science",
         "Chapter": "Historiography : Development in the West",
-        "Location": "/ques/english/H_C1.json"
+        "Location": "images/ques/english/H_C1.json"
     },
     {
         "id": 6,
@@ -51,7 +51,7 @@ const allTests = [
         "Medium": "English",
         "Subject": "Geography",
         "Chapter": "Field Visit",
-        "Location": "/ques/english/G_C1.json"
+        "Location": "images/ques/english/G_C1.json"
     },
     {
         "id": 7,
@@ -60,7 +60,7 @@ const allTests = [
         "Medium": "English",
         "Subject": "Hindi",
         "Chapter": "Grammar - Sentence distinction(वाक्य भेद)",
-        "Location": "/ques/english/LH_G1.json"
+        "Location": "images/ques/english/LH_G1.json"
     },
     {
         "id": 8,
@@ -69,7 +69,7 @@ const allTests = [
         "Medium": "English",
         "Subject": "Marathi",
         "Chapter": "Grammar",
-        "Location": "/ques/english/MH_G1.json"
+        "Location": "images/ques/english/MH_G1.json"
     },
     {
         "id": 9,
@@ -78,7 +78,7 @@ const allTests = [
         "Medium": "English",
         "Subject": "English",
         "Chapter": "Grammar - Tenses",
-        "Location": "/ques/english/E_G1.json"
+        "Location": "images/ques/english/E_G1.json"
     }
 ];
 
