@@ -16,11 +16,10 @@
     <br>
     <br>
     <br>
+    <a class="btn btn-primary btn-lg float-right" href="#answers" role="button">View Answers</a>
     <br>
-    <a class="btn btn-primary btn-lg float-right" href="{% url 'forum:addAnswer' question.id %}" role="button">Add a Answer</a>
-    <br>
-    <br>
-    <h4>{{error_message}}</h4>
+    
+    <h4 style="color:#3f6ad8">{{error_message}}</h4>
     <br>
 <br>
 </div>
@@ -37,11 +36,39 @@
 <br>
 <br>
 <br>
-    <h3 style="color: #312b26;">{{question.title}}</h1>
-    <h4 style="color: #312b26;">{{question.body}}</h2>
+    <h4 style="color: #312b26;">{{question.title}}</h4>
+    <h6 style="color: #312b26;">{{question.body}}</h6>
     <br>
 </div>
-<div class="container-fluid">
+
+<div class="container">
+    <div class="row">
+        <div class="mx-auto d-block float-left">
+            <div class="card card-signin my-4 mx-auto d-block" style="background-color: #fff; border-radius: 20px; background: linear-gradient(to right, #ebebeb, #f1f1f1);">
+                <div class="card-body">
+                    <!--<h4 class=" text-center" ><strong>{{question.title}}</strong></h4>
+                    <h6 class="text-center" >{{question.body}}</h6>-->
+                    <!--<div>
+                        <h6>{{error_message}}</h6>
+                    </div>-->
+                        <form class="form-signin" action="" method="post" style="padding:0.01rem">
+                            {% csrf_token %}
+                            <label for="body" class="form-label-group">Your Answer</label>
+                            <textarea id="body" name="body" rows="10" cols="100"  type="text" class="form-control" required style="border-radius: 20px; font-size: 14px;">
+                            </textarea><br>                          
+                            <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" style="font-size: 1rem;">Add Answer</button>
+                            
+                        </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid" id="answers">
+<br>
+<br>
+
     {% for i in answers %}
         <div class="card" style="background-color: #c2e1ff; color: #1a1111;">
            <!-- <div class="card-header" style="font-size:1.6rem; background-color: #9adffa; color: #312b26">
@@ -61,7 +88,17 @@
 </div>
 
 
-
+<script>
+function focus()
+{
+window.location.href="queAns.html#upar";
+}
+</script>
+<script>
+if ( window.history.replaceState ) {
+  window.history.replaceState( null, null, window.location.href );
+}
+</script>
 
 
 {% endblock %}

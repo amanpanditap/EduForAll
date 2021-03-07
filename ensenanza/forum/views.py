@@ -28,6 +28,8 @@ class forumLanding(View):
 #display particular question and all answers to it
 class queAns(View):
     def get(self, request, id, template_name='queAns.html'):
+        if request.user.is_anonymous:
+            return redirect('Login')
         message = {}
         Question = question.objects.filter(id=id)
         Question = Question[0]
@@ -35,6 +37,33 @@ class queAns(View):
         answers = answer.objects.filter(whichQuestion=Question)
         answers = answers.order_by('-created')
         message['answers']=answers
+        return render(request,template_name,message)
+
+    def post(self, request, id, template_name='queAns.html'):
+        if request.user.is_anonymous:
+            return redirect('Login')
+        try:
+            body = request.POST.get('body')
+            answerBy = student.objects.filter(user=request.user)
+            print(answerBy)
+            answerBy = answerBy[0]
+            whichQuestion = question.objects.filter(id=id)
+            whichQuestion = whichQuestion[0]
+            Answer = answer(whichQuestion=whichQuestion,answerBy=answerBy,body=body)
+            Answer.save()
+        except:
+            message = {}
+            message['error_message'] = 'Something went wrong, try again.'
+            #message['question']= whichQuestion
+            #Answers = answer.objects.filter(whichQuestion=whichQuestion)
+            #message['answers']= Answers.order_by('-created')
+            return render(request,template_name,message)
+        message = {}
+        message['error_message'] = 'Answer submitted successfully.'
+        message['question']= whichQuestion
+        Answers = answer.objects.filter(whichQuestion=whichQuestion)
+        message['answers']= Answers.order_by('-created')
+        #return redirect(reverse_lazy('forum:queAns whichQuestion.id'))
         return render(request,template_name,message)
 
 #ask a question
