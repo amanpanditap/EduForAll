@@ -1,0 +1,71 @@
+[{
+    "question_string": "Which of the following is a primary occupation?",
+    "choices": {
+      "correct": "Fishing",
+      "wrong": ["Manufacturing", "Banking", "Transportation"]
+    }
+  }, 
+  {
+    "question_string": "Which of the following features is prominently visible in rural areas?",
+    "choices": {
+      "correct": "Roofs of the houses are made of mud and wood",
+      "wrong": ["Cement walls of the house", "High rises", "Houses are located close to each other"]
+    }
+  }, 
+  {
+    "question_string": "Houses built along a straight line represent which type of settlement?",
+    "choices": {
+      "correct": "Linear Pattern",
+      "wrong": ["T-shaped Settlements", "Circular pattern", "Rectangular Settlements"]
+    }
+  }, 
+  {
+    "question_string": "Which of the following are the part of land’s relief features?",
+    "choices": {
+      "correct": "All of the above",
+      "wrong": ["Rivers", "Plateaus", "Mountains"]
+    }
+  },
+  {
+      "question_string": "What does the presence of semi-arid thorny type of vegetation on a place indicates?",
+      "choices": {
+        "correct": "Scarce rainfall",
+        "wrong": ["Presence of irrigation facilities", "Less utilisation of vegetation", "Type of human settlement"]
+      }
+    },
+    {
+      "question_string": "Which crop is generally grown in regions of high rainfall?",
+      "choices": {
+        "correct": "Rice",
+        "wrong": ["Bajra", "Maize", "Jowar"]
+      }
+    },
+    {
+      "question_string": "Which of the following is a characteristic feature of urban areas?",
+      "choices": {
+        "correct": "All of the above",
+        "wrong": ["Multi-storey buildings", "High population density", "Shopping malls"]
+      }
+    },
+    {
+      "question_string": "Which of the following landform is created as a result of depositional activities of sea?",
+      "choices": {
+        "correct": "Sea beaches",
+        "wrong": ["Cliff", "Stacks", "Sea Caves"]
+      }
+    },
+    {
+      "question_string": "Basalt is which type of rock?",
+      "choices": {
+        "correct": "Igneous",
+        "wrong": ["Sedimentary", "Metamorphic", "All of the above"]
+      }
+    },
+    {
+      "question_string": "Which of the following statements is NOT true?",
+      "choices": {
+        "correct": "We should visit a river bank for understanding political features of a region.",
+        "wrong": ["Field visits help in understanding human-environment relationship", "It is important to first understand the aim or purpose of a field visit.", "Field visits give us an opportunity to get first hand information."]
+      }
+    }
+  ]

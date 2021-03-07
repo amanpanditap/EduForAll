@@ -27,6 +27,7 @@ urlpatterns = [
     path('logout', views.Logout, name='Logout'),
     path('syllabus', views.Syllabus.as_view(), name='Syllabus'),
     path('forum/',include('forum.urls',namespace='forum')),
+    path('tests', views.Tests.as_view(), name='Tests'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 #path('classteacher', include('classteacher.urls', namespace='classteacher')),

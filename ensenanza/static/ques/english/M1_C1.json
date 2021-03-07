@@ -1,0 +1,71 @@
+[{
+  "question_string": "One equation of a pair of dependent linear equations is -5x + 7y = 2, the second equation can be :",
+  "choices": {
+    "correct": "10x - 14y = -4",
+    "wrong": [" -10x - 14x + 4 = 0", " -10x + 14y + 4 = 0", " 10x + 14y + 4 =0"]
+  }
+}, 
+{
+  "question_string": " Which of the following pair of linear equations is inconsistent?",
+  "choices": {
+    "correct": "2x + 3y = 7; 4x + 6y = 5",
+    "wrong": ["x - 2y = 6; 2x + 3y = 4", "5x - 3y =11; 7x + 2y =13", "9x - 8y = 17; 18x -16y = 34"]
+  }
+}, 
+{
+  "question_string": "For what value of 'K' will the system of equations 3x + y = 1 and (2K - 1)x + (K - 1)y = 2K + 1 have no solution?",
+  "choices": {
+    "correct": "2",
+    "wrong": ["-2", "3", "1"]
+  }
+}, 
+{
+  "question_string": "At a closing down sale, a book store was selling 3 books and 5 notebooks for Rs. 309 or 6 books and 2 notebooks for Rs. 282. How much would one book and 1 notebook cost?",
+  "choices": {
+    "correct": "Rs 75",
+    "wrong": ["Rs 33", "Rs 42", "Rs 57"]
+  }
+},
+{
+    "question_string": "The values of x and y which satisfy the equations: 47x + 31y = 63 and 31x + 47y=15 are ____________",
+    "choices": {
+      "correct": "2 and -1",
+      "wrong": ["2 and 1", "-2 and -1", "-2 and 1"]
+    }
+  },
+  {
+    "question_string": "3 women and 6 men can together finish a tailoring job in 5 days, while 4 women and 7 men can finish it in 4 days. Find the time taken by 1 woman alone to finish the work, and also that taken by 1 man alone. The linear equations(in standard form) to solve this problem algebraically are",
+    "choices": {
+      "correct": "15u + 30v - 1 = 0; 16u + 28v - 1 = 0",
+      "wrong": ["16u + 30v - 1 = 0; 16u + 28v - 1 = 0", "16x + 30y - 1 = 0; 16x + 28y - 1 = 0", "15u - 30v + 1 = 0; 16u + 28v + 1 = 0"]
+    }
+  },
+  {
+    "question_string": "Solve the following simultaneous equations using Cramer’s rule and find the values of x and y respectively. -2x + y = 3, x + 3y = 2",
+    "choices": {
+      "correct": "-1, 1",
+      "wrong": ["-1, -1", "1, -1", "1, 1"]
+    }
+  },
+  {
+    "question_string": "Anita has only 20 paise and 25 paise coins in her purse. She has 50 coins in all total to Rs. 11.25. The linear equation representing the situations is",
+    "choices": {
+      "correct": "20x + 25y = 1125; x + y = 50",
+      "wrong": ["20x + 25y = 50; x + y = 11.25", "25x + 20y = 11.25; 25x + 20y = 50", "20x + 25y = 11.25; 20x + 25y = 5"]
+    }
+  },
+  {
+    "question_string": "The following pair of linear equations 3x - 2y + 5 = 0, 5x + 7y = 2 will have",
+    "choices": {
+      "correct": "a unique solution",
+      "wrong": ["no solution", "infinite solution", "none of the above"]
+    }
+  },
+  {
+    "question_string": "Find the point on the Cartesian plane where the line 3x - 2y = 6 intersects the y - axis.",
+    "choices": {
+      "correct": "(0, -3)",
+      "wrong": ["(-1, -2)", "(3, 2)", "(1, 2)"]
+    }
+  }
+]
