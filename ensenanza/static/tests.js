@@ -110,7 +110,7 @@ getBooks = () => {
     <div class="card">
       <div class="card-body">
         <h5 class="card-title" style="text-align: center">${p.Chapter}</h5>
-        <p class="card-text" style="text-align: center">Board: ${p.Subject}</p><br>
+        <p class="card-text" style="text-align: center">Subject: ${p.Subject}</p>
         <p class="card-text" style="text-align: center">Board: ${p.Board}<br>Class: ${p.Class}<br>Medium: ${p.Medium}</p>
         <div class="text-center">
         <button type="button" class="btn btn-primary" onclick="letsGiveTheTest(${p.id})">Give Test</button>
