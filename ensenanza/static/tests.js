@@ -1,12 +1,13 @@
-const allTests = [
-    {
+//jshint esversion: 6
+
+const allTests = [{
         "id": 1,
         "Board": "SSC",
         "Class": 10,
         "Medium": "English",
         "Subject": "Mathematics Part 1",
         "Chapter": "Linear Equations in Two Variables",
-        "Location": "images/ques/english/M1_C1.json"
+        "Location": "/files/ques/english/M1_C1.json"
     },
     {
         "id": 2,
@@ -15,7 +16,7 @@ const allTests = [
         "Medium": "English",
         "Subject": "Mathematics Part 2",
         "Chapter": "Similarity",
-        "Location": "images/ques/english/M2_C1.json"
+        "Location": "/files/ques/english/M2_C1.json"
     },
     {
         "id": 3,
@@ -24,7 +25,7 @@ const allTests = [
         "Medium": "English",
         "Subject": "Science & Technology Part 1",
         "Chapter": "Gravitation",
-        "Location": "images/ques/english/S1_C1.json"
+        "Location": "/files/ques/english/S1_C1.json"
     },
     {
         "id": 4,
@@ -33,7 +34,7 @@ const allTests = [
         "Medium": "English",
         "Subject": "Science & Technology Part 2",
         "Chapter": "Heredity and Evolution",
-        "Location": "images/ques/english/S2_C1.json"
+        "Location": "/files/ques/english/S2_C1.json"
     },
     {
         "id": 5,
@@ -42,7 +43,7 @@ const allTests = [
         "Medium": "English",
         "Subject": "History and Political Science",
         "Chapter": "Historiography : Development in the West",
-        "Location": "images/ques/english/H_C1.json"
+        "Location": "/files/ques/english/H_C1.json"
     },
     {
         "id": 6,
@@ -51,7 +52,7 @@ const allTests = [
         "Medium": "English",
         "Subject": "Geography",
         "Chapter": "Field Visit",
-        "Location": "images/ques/english/G_C1.json"
+        "Location": "/files/ques/english/G_C1.json"
     },
     {
         "id": 7,
@@ -60,7 +61,7 @@ const allTests = [
         "Medium": "English",
         "Subject": "Hindi",
         "Chapter": "Grammar - Sentence distinction(वाक्य भेद)",
-        "Location": "images/ques/english/LH_G1.json"
+        "Location": "/files/ques/english/LH_G1.json"
     },
     {
         "id": 8,
@@ -69,7 +70,7 @@ const allTests = [
         "Medium": "English",
         "Subject": "Marathi",
         "Chapter": "Grammar",
-        "Location": "images/ques/english/MH_G1.json"
+        "Location": "/files/ques/english/MH_G1.json"
     },
     {
         "id": 9,
@@ -78,7 +79,7 @@ const allTests = [
         "Medium": "English",
         "Subject": "English",
         "Chapter": "Grammar - Tenses",
-        "Location": "images/ques/english/E_G1.json"
+        "Location": "/files/ques/english/E_G1.json"
     }
 ];
 
@@ -86,25 +87,25 @@ const allTests = [
 
 
 getBooks = () => {
-let board = document.querySelector('#board').value;
-let medium = document.querySelector('#medium').value;
-let acadYear = document.querySelector('#acadYear').value;
-let subject = document.querySelector('#subject').value;
-let booksToShow = []
+    let board = document.querySelector('#board').value;
+    let medium = document.querySelector('#medium').value;
+    let acadYear = document.querySelector('#acadYear').value;
+    let subject = document.querySelector('#subject').value;
+    let booksToShow = []
 
-for (let i = 0; i < allTests.length; i++) {
-    //console.log(allTests[i].Board, board)
-    //console.log(allTests[i].Class, Number(acadYear))
-    //console.log(allTests[i].Medium, medium)
-    if (allTests[i].Board === board && allTests[i].Class === Number(acadYear) && allTests[i].Medium === medium && allTests[i].Subject === subject) {
-        booksToShow.push(allTests[i]);
+    for (let i = 0; i < allTests.length; i++) {
+        //console.log(allTests[i].Board, board)
+        //console.log(allTests[i].Class, Number(acadYear))
+        //console.log(allTests[i].Medium, medium)
+        if (allTests[i].Board === board && allTests[i].Class === Number(acadYear) && allTests[i].Medium === medium && allTests[i].Subject === subject) {
+            booksToShow.push(allTests[i]);
+        }
     }
-}
 
-let content = '';
+    let content = '';
 
-booksToShow.forEach(p => {
-    content += `
+    booksToShow.forEach(p => {
+        content += `
     <div class="col-sm-3">
     <div class="card">
       <div class="card-body">
@@ -118,9 +119,9 @@ booksToShow.forEach(p => {
     </div>
   </div>
 `
-});
+    });
 
-document.querySelector("#wantedBooks").innerHTML = content;
+    document.querySelector("#wantedBooks").innerHTML = content;
 
 }
 
@@ -128,14 +129,30 @@ letsGiveTheTest = (questionsID) => {
     //console.log(questionsID);
     document.querySelector("#thisMustGo").innerHTML = '';
     let getThatInstance;
-    for(let i=0; i<allTests.length; i++)
-    {
-        if(allTests[i].id === Number(questionsID))
-        {
+    for (let i = 0; i < allTests.length; i++) {
+        if (allTests[i].id === Number(questionsID)) {
             getThatInstance = allTests[i];
             break;
         }
     }
-    console.log(getThatInstance);
+    let thatLocation = getThatInstance.Location;
+
+
+    /*var allQuestions = fetch(thatLocation)
+    .then(response => {
+        return response.json();
+    });*/
+
+    fetch(thatLocation)
+        .then(response => {
+            return response.json();
+        })
+        .then((data)=>{
+            let allQuestions = data;
+            console.log(allQuestions);
+        })
+
+    
+
 
 }

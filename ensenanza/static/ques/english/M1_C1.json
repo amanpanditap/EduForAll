@@ -27,8 +27,7 @@
   }
 },
 {
-    "question_string": "The values of x and y which satisfy the equations: 
-    47x + 31y = 63 and 31x + 47y=15 are ____________",
+    "question_string": "The values of x and y which satisfy the equations: 47x + 31y = 63 and 31x + 47y=15 are ____________",
     "choices": {
       "correct": "2 and -1",
       "wrong": ["2 and 1", "-2 and -1", "-2 and 1"]
