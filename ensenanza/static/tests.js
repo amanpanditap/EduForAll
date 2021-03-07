@@ -191,7 +191,7 @@ letsGiveTheTest = (questionsID) => {
                 <div class="question">
                 <h3>${allQuestions[i].question_string}</h3>
                 <div class="form-check">
-                <input class="form-check-input" type="radio" name="${i}" value="${allOptions[0]}" checked>
+                <input class="form-check-input" type="radio" name="${i}" value="${allOptions[0]}">
                 <label class="form-check-label" for="${i}">
                 ${allOptions[0]}
                 </label>
@@ -227,12 +227,18 @@ letsGiveTheTest = (questionsID) => {
                 for (let i = 0; i < allQuestions.length; i++) 
                 {
                   let allTheDamnOptions = document.getElementsByName(i.toString());
+                  let countMeSenpai = 0;
                   for (let j = 0; j < allTheDamnOptions.length; j++) {
                     if(allTheDamnOptions[j].checked === true)
                     {
                       givenAnswers.push(allTheDamnOptions[j].value);
                       break;
                     }
+                    countMeSenpai += 1;
+                  }
+                  if(countMeSenpai === allTheDamnOptions.length)
+                  {
+                    givenAnswers.push(null);
                   }
                 }
               
