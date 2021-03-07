@@ -1,60 +1,48 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %}Ensenanza - Register{% endblock %}
+{% load humanize %}
+{% block title %}Ensenanza - Profile{% endblock %}
 {% block content %}
 <link rel="stylesheet" href="{% static 'all.css' %}">
 <link rel="stylesheet" href="{% static 'bt.css' %}">
 <link rel="stylesheet" href="{% static 'btb.css' %}">
 <link rel="stylesheet" href="{% static 'login.css' %}">
 <br>
-
+{% if user.is_authenticated %}
 <div class="container">
     <div class="row">
         <div class="col-sm-9 col-md-7 col-lg-5 mx-auto d-block">
             <div class="card card-signin my-5 mx-auto d-block" style="background-color: #fff; border-radius: 20px; background: linear-gradient(to right, #ebebeb, #f1f1f1);">
                 <div class="card-body">
-                    <h3 class="card-title text-center" style="font-size:2.3rem;">Register</h3>
+                    <h3 class="card-title text-center" style="font-size:2.3rem;">Edit Profile</h3>
                     <div>
                         <h5 style="text-align:center; color:rgb(207, 73, 73)"> {{error_message}} </h5>
                     </div>
                     <form class="form-signin" action="" method="post">
                         {% csrf_token %}
-                        <label for="inputEmail" class="form-label-group">First Name</label>
-                        <input type="text" id="inputEmail" class="form-control" name="first_name"
-                            placeholder="First Name" required autofocus
-                            style="border-radius: 20px; font-size: 14px;"><br>
 
-                        <label for="inputEmail" class="form-label-group">Last Name</label>
-                        <input type="text" id="inputEmail" class="form-control" name="last_name" placeholder="Last Name"
-                            required style="border-radius: 20px; font-size: 14px;"><br>
-
-                        <label for="inputEmail" class="form-label-group">Email</label>
-                        <input type="email" id="inputEmail" class="form-control" name="email" placeholder="Email"
-                            required style="border-radius: 20px; font-size: 14px;"><br>
-
-                            <label for="inputEmail" class="form-label-group">Username</label>
-                        <input type="text" id="inputEmail" class="form-control" name="username" placeholder="Username"
-                            required style="border-radius: 20px; font-size: 14px;"><br>
-
-                        <label for="medium">Choose Your Medium: </label>
+                        <label for="medium">Medium: </label>
                         <select name="medium" id="medium" required class="form-control"
                             style="border-radius: 20px; font-size: 15px;">
+                            <option value="{{ user.student.medium}}">{{ user.student.medium|capfirst }}</option>
                             <option value="english">English</option>
                             <option value="hindi">Hindi</option>
                             <option value="marathi">Marathi</option>
                         </select><br>
 
-                        <label for="board">Choose Your Board: </label>
+                        <label for="board">Board: </label>
                         <select name="board" id="board" required class="form-control"
                             style="border-radius: 20px; font-size: 15px;">
+                            <option value="{{ user.student.board }}">{{ user.student.board|capfirst }}</option>
                             <option value="SSC">SSC</option>
                             <option value="CBSE">CBSE</option>
                             <option value="ICSE">ICSE</option>
                         </select><br>
 
-                        <label for="acadYear">Choose Year: </label><br>
+                        <label for="acadYear">Standard: </label><br>
                         <select name="acadYear" id="acadYear" required style="border-radius: 20px; font-size: 15px;"
                             class="form-control">
+                            <option value="{{ user.student.acadYear }}">{{ user.student.acadYear|ordinal }} Standard</option>
                             <option value="1">First Standard</option>
                             <option value="2">Second Standard</option>
                             <option value="3">Third Standard</option>
@@ -66,18 +54,11 @@
                             <option value="9">Ninth Standard</option>
                             <option value="10">Tenth Standard</option>
                         </select><br>
-
-                        <label for="inputEmail" class="form-label-group">Password</label>
-                        <input type="password" id="inputEmail" class="form-control" name="password1" placeholder="Password"
-                            required style="border-radius: 20px; font-size: 14px;"><br>
-
-
-                       <label for="inputEmail" class="form-label-group">Confirm Password</label>
-                        <input type="password" id="inputEmail" class="form-control" name="password2" placeholder="Confirm Password"
-                            required style="border-radius: 20px; font-size: 14px;"><br>
-
-                        <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit"
-                            style="font-size: 1.2rem;">Register</button>
+                    <button class="btn btn-sm btn-primary btn-block text-uppercase" type="submit"
+                            style="font-size: 1.2rem;">Save</button>
+{% else %}
+<h1>You are not authorized to access this page.Please login.</h1>
+{% endif %}
                     </form>
                 </div>
             </div>

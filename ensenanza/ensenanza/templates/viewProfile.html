@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load humanize %}
+{% block title %}Ensenanza - Profile{% endblock %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'all.css' %}">
+<link rel="stylesheet" href="{% static 'bt.css' %}">
+<link rel="stylesheet" href="{% static 'btb.css' %}">
+<link rel="stylesheet" href="{% static 'login.css' %}">
+<br>
+{% if user.is_authenticated %}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto d-block">
+            <div class="card card-signin my-5 mx-auto d-block" style="background-color: #fff; border-radius: 20px; background: linear-gradient(to right, #ebebeb, #f1f1f1);">
+                <div class="card-body">
+                    <h3 class="card-title text-center" style="font-size:2.3rem;">Profile</h3>
+                    <div>
+                        <h5 style="text-align:center; color:rgb(207, 73, 73)"> {{error_message}} </h5>
+                    </div>
+                    <!--<form class="form-signin" action="" method="post">-->
+                        {% csrf_token %}
+                        <label for="inputEmail" class="form-label-group">First Name</label>
+                        <div >
+                            <span class="form-control" style="border-radius: 20px; font-size: 14px;">{{ user.first_name }}</span>
+                        </div>
+                        <br>
+
+                        <label for="inputEmail" class="form-label-group">Last Name</label>
+                        <div >
+                            <span class="form-control" style="border-radius: 20px; font-size: 14px;">{{ user.last_name }}</span>
+                        </div>
+                        <br>
+
+                        <label for="inputEmail" class="form-label-group">Email</label>
+                        <div >
+                            <span class="form-control" style="border-radius: 20px; font-size: 14px;">{{ user.email }}</span>
+                        </div>
+                        <br>
+
+                        <label for="inputEmail" class="form-label-group">Username</label>
+                        <div >
+                            <span class="form-control" style="border-radius: 20px; font-size: 14px;">{{ user.username }}</span>
+                        </div>
+                        <br>
+
+                        <label for="medium">Medium: </label>
+                        <div >
+                            <span class="form-control" style="border-radius: 20px; font-size: 14px;">{{ user.student.medium|capfirst }}</span>
+                        </div>
+                        <br>
+
+                        <label for="board">Board: </label>
+                        <div >
+                            <span class="form-control" style="border-radius: 20px; font-size: 14px;">{{ user.student.board|capfirst }}</span>
+                        </div>
+                        <br>
+
+                        <label for="acadYear">Standard: </label><br>
+                        <div >
+                            <span class="form-control" style="border-radius: 20px; font-size: 14px;">{{ user.student.acadYear|ordinal }} Standard</span>
+                        </div>
+                        <br>
+                    <div class="w3-container">
+
+                          <div class="w3-show-inline-block">
+                              <div class="w3-bar">
+                                  <a href="{% url 'editProfile' %}">
+                                      <button class="btn btn-warning text-uppercase" type="submit"
+                                        style="font-size: 1.2rem;">Edit Profile</button>
+                                  </a>
+                                  <span style="padding-left:55px"></span>
+                                  <a href="{% url 'resetPassword' %}">
+                                      <button class="btn btn-info text-uppercase" type="submit"
+                                    style="font-size: 1.2rem;">Reset Password</button>
+                                  </a>
+                              </div>
+                          </div>
+                    </div>
+
+                    <!--</form>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% else %}
+<h1>You are not authorized to access this page.Please login.</h1>
+{% endif %}
+<script src="{% static 'jq.js' %}"></script>
+
+{% endblock %}
