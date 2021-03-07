@@ -191,7 +191,7 @@ letsGiveTheTest = (questionsID) => {
                 <div class="question">
                 <h3>${allQuestions[i].question_string}</h3>
                 <div class="form-check">
-                <input class="form-check-input" type="radio" name="${i}" value="${allOptions[0]}" >
+                <input class="form-check-input" type="radio" name="${i}" value="${allOptions[0]}" checked >
                 <label class="form-check-label" for="${i}">
                 ${allOptions[0]}
                 </label>
