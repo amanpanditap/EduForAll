@@ -16,7 +16,7 @@ const allTests = [{
         "Medium": "English",
         "Subject": "Mathematics Part 2",
         "Chapter": "Similarity",
-        "Location": "/files/ques/english/M2_C1.json"
+        "Location": "/files/ques/english/M1_C1.json"
     },
     {
         "id": 3,
@@ -143,13 +143,113 @@ letsGiveTheTest = (questionsID) => {
         return response.json();
     });*/
 
+    function shuffle(array) {
+        var currentIndex = array.length,
+          temporaryValue, randomIndex;
+      
+        // While there remain elements to shuffle...
+        while (0 !== currentIndex) {
+      
+          // Pick a remaining element...
+          randomIndex = Math.floor(Math.random() * currentIndex);
+          currentIndex -= 1;
+      
+          // And swap it with the current element.
+          temporaryValue = array[currentIndex];
+          array[currentIndex] = array[randomIndex];
+          array[randomIndex] = temporaryValue;
+        }
+      
+        return array;
+      }
+
+
+
     fetch(thatLocation)
         .then(response => {
             return response.json();
         })
         .then((data)=>{
             let allQuestions = data;
-            console.log(allQuestions);
+            allQuestions = shuffle(allQuestions);
+            let answerList = [];
+            content = "";
+            for (let i = 0; i < allQuestions.length; i++) {
+
+                let allOptions = [];
+                allOptions.push(allQuestions[i].choices.correct);
+                allOptions.push(allQuestions[i].choices.wrong[0]);
+                allOptions.push(allQuestions[i].choices.wrong[1]);
+                allOptions.push(allQuestions[i].choices.wrong[2]);
+              
+                answerList.push(allQuestions[i].choices.correct);
+              
+                allOptions = shuffle(allOptions)
+              
+                content +=
+                  `
+                <div class="question">
+                <h3>${allQuestions[i].question_string}</h3>
+                <div class="form-check">
+                <input class="form-check-input" type="radio" name="${i}" value="${allOptions[0]}" checked>
+                <label class="form-check-label" for="${i}">
+                ${allOptions[0]}
+                </label>
+                </div>
+                <div class="form-check">
+                <input class="form-check-input" type="radio" name="${i}" value="${allOptions[1]}">
+                <label class="form-check-label" for="${i}">
+                ${allOptions[1]}
+                </label>
+                </div>
+                <div class="form-check">
+                <input class="form-check-input" type="radio" name="${i}" value="${allOptions[2]}">
+                <label class="form-check-label" for="${i}">
+                ${allOptions[2]}
+                </label>
+                </div>
+                <div class="form-check">
+                <input class="form-check-input" type="radio" name="${i}" value="${allOptions[3]}">
+                <label class="form-check-label" for="${i}">
+                ${allOptions[3]}
+                </label>
+                </div>
+              </div>
+                `
+              }
+              
+              content += `<br><br><button type="button" class="btn btn-primary btn-lg" onclick="checkMyAnswers()">Submit</button><br><br>`
+              
+              document.querySelector("#testComesHere").innerHTML = content;
+              
+              checkMyAnswers = () => {
+                let givenAnswers = [];
+                for (let i = 0; i < allQuestions.length; i++) 
+                {
+                  let allTheDamnOptions = document.getElementsByName(i.toString());
+                  for (let j = 0; j < allTheDamnOptions.length; j++) {
+                    if(allTheDamnOptions[j].checked === true)
+                    {
+                      givenAnswers.push(allTheDamnOptions[j].value);
+                      break;
+                    }
+                  }
+                }
+              
+              
+                correctAnswers = 0;
+                for(let i = 0; i < answerList.length; i++) {
+                  if(givenAnswers[i]==answerList[i]) {
+                    correctAnswers += 1;
+                  }
+                }
+              
+                content = `
+                <h2>Your Score: ${correctAnswers}/${answerList.length}</h2>
+                `;
+              
+                document.querySelector("#testComesHere").innerHTML = content;
+              }
         })
 
     
