@@ -42,22 +42,22 @@
               <ul class="navbar-nav mr-auto">
                 
                 <li class="nav-item">
-                  <a class="nav-link" href="{% url 'forum:forumLanding' %}" style="margin-left: 2%;"><span style="color:rgb(0, 0, 0)">Forum</a>
+                  <a class="nav-link" href="{% url 'forum:forumLanding' %}" style="font-size:1.1rem; margin-left: 2%;"><span style="color:rgb(0, 0, 0)">Forum</a>
                 </li>
                 
                 <li class="nav-item">
-                  <a class="nav-link" href="{% url 'Tests' %}" style="margin-left: 2%;"><span style="color:rgb(0, 0, 0)">Tests</a>
+                  <a class="nav-link" href="{% url 'Tests' %}" style="font-size:1.1rem; margin-left: 2%;"><span style="color:rgb(0, 0, 0)">Tests</a>
               </li>
                 
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'Syllabus' %}" style="margin-left: 2%;"><span style="color:rgb(0, 0, 0)">Syllabus</a>
+                    <a class="nav-link" href="{% url 'Syllabus' %}" style="font-size:1.1rem; margin-left: 2%;"><span style="color:rgb(0, 0, 0)">Syllabus</a>
                 </li>
 
               </ul>
               
               {% if user.is_authenticated %}
-                <p style="font-size:1.1rem; padding-top:1%"><a href="{% url 'viewProfile' %}"> Hello, {{user.first_name}} {{user.last_name}}</a></p>
-              <p style="font-size:1.1rem; padding-top:1%; margin-left: 2%;"><a href="{% url 'Logout' %}">Logout</a></p>
+                <p style="font-size:1.1rem; padding-top:1%"><a href="{% url 'viewProfile' %}"><span style="color:blue">Hello, {{user.first_name}} {{user.last_name}}</a></p>
+              <p style="font-size:1.1rem; padding-top:1%; margin-left: 2%;"><a href="{% url 'Logout' %}"><span style="color:blue">Logout</a></p>
               {% else %}
               <p style="font-size:1.1rem; padding-top:1%; margin-left: 2%;"><a href="{% url 'register' %}"><span style="color:blue">Register</a></p>
               <p style="font-size:1.1rem; padding-top:1%; margin-left: 2%;"><a href="{% url 'Login' %}"><span style="color:blue">Login</a></p>
