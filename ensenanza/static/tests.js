@@ -195,7 +195,7 @@ letsGiveTheTest = (questionsID) => {
 
                 <div class="question bg-white p-3 border-bottom" style="border-radius: 20px 20px;">
                     <div class="d-flex flex-row align-items-center question-title">
-                        <h3 style="border:grey; border-width:2px; border-style:dotted; ">${allQuestions[i].question_string}</h3>
+                        <h3 style="border:grey; border-width:2px; border-style:dotted; border-radius:20px; padding: 2%; color:#6b6060 ">${allQuestions[i].question_string}</h3>
                     </div>
 
                 <div class="form-check">
@@ -233,6 +233,9 @@ letsGiveTheTest = (questionsID) => {
               content += `<br><br><button type="button" style="margin:auto; display:block;" class="btn btn-warning btn-lg" onclick="checkMyAnswers()">Submit</button><br><br>`
               
               document.querySelector("#testComesHere").innerHTML = content;
+
+              content = `${getThatInstance.Subject}: ${getThatInstance.Chapter}`;
+              document.querySelector("#test-title").innerHTML = content;
               
               checkMyAnswers = () => {
                 let givenAnswers = [];
@@ -263,7 +266,7 @@ letsGiveTheTest = (questionsID) => {
                 }
               
                 content = `
-                <h2>Your Score: ${correctAnswers}/${answerList.length}</h2>
+                <div class="text-center"><h2 style="color: #2e2e2e; margin-top:3%; font-size:2rem;">Your Score: ${correctAnswers}/${answerList.length}</h2></div>
                 `;
               
                 document.querySelector("#testComesHere").innerHTML = content;
