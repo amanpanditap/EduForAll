@@ -17,4 +17,4 @@
 - When you run the Server, use the following line: `python manage.py runserver <ipv4 address>:<port number>`
   - You may get your IPv4 address from Netowrks in your settings. Example: `192.168.0.107`. Make sure you're connected to a LAN network.
   - Port Number can be any number from `1024 to 65353`. We typically use `8000`.
-  - Your final code may therefore look something like - `python manage.py runserver 192.168.0.107:8000`. Unless you encounter a fire-wall, this would host EduForAll on your Local Server. Any device on the LAN can now access the website using the same URL you entered viz. `192.168.0.107:8000`.
+- Your final code may therefore look something like - `python manage.py runserver 192.168.0.107:8000`. Unless you encounter a fire-wall, this would host EduForAll on your Local Server. Any device on the LAN can now access the website using the same URL you entered viz. `192.168.0.107:8000`.
