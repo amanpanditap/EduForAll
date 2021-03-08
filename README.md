@@ -23,7 +23,7 @@
 - **Tests**
   - Solve Chapter-based MCQ Tests to practice the necessary concepts.
   - Search for the tests based on your Medium, Board, Grade and Subject.
-- **Resources**
+- **Syllabus**
   - Fetch the Textbooks by Medium, Board and Grade.
   - You may choose to read or download on your device.
 - **Forum**
