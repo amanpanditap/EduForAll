@@ -31,3 +31,7 @@
   - You need to Register/Login for the same, so as to maintain the data of the answerer.
 
 ### Stack Used:
+- **Backend** - Python, Django.
+- **Database** - SQLite.
+- **Frontend**- HTML, CSS, JS, jQuery, Bootstrap.
+
