@@ -1,7 +1,6 @@
 /*********************************
  Testimonials
 *********************************/
-
 .testimonials
 {
 	width: 100%;
@@ -27,7 +26,8 @@
 {
 	display: inline-block;
 	margin-top: 7px;
-	text-align: center;
+	text-align: justify;
+  	text-justify: auto;
 }
 .testimonial_author div:first-child
 {
