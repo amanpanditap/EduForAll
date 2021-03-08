@@ -189,7 +189,15 @@ letsGiveTheTest = (questionsID) => {
                 content +=
                   `
                 <div class="question">
-                <h3>${allQuestions[i].question_string}</h3>
+                <div class="container mt-5 ">
+                <div class="d-flex justify-content-center row ">
+                <div class="col-md-10 col-lg-10">
+
+                <div class="question bg-white p-3 border-bottom" style="border-radius: 20px 20px;">
+                    <div class="d-flex flex-row align-items-center question-title">
+                        <h3 style="border:grey; border-width:2px; border-style:dotted; ">${allQuestions[i].question_string}</h3>
+                    </div>
+
                 <div class="form-check">
                 <input class="form-check-input" type="radio" name="${i}" value="${allOptions[0]}">
                 <label class="form-check-label" for="${i}">
@@ -214,11 +222,15 @@ letsGiveTheTest = (questionsID) => {
                 ${allOptions[3]}
                 </label>
                 </div>
+                </div>
               </div>
+        </div>
+    </div>
+</div>
                 `
               }
               
-              content += `<br><br><button type="button" class="btn btn-primary btn-lg" onclick="checkMyAnswers()">Submit</button><br><br>`
+              content += `<br><br><button type="button" style="margin:auto; display:block;" class="btn btn-warning btn-lg" onclick="checkMyAnswers()">Submit</button><br><br>`
               
               document.querySelector("#testComesHere").innerHTML = content;
               
