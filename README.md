@@ -11,10 +11,23 @@
 - Install **Django** using  `python -m pip install Django`.
 - In directory on level with `manage.py` run the following line on Terminal `python manage.py runserver`.
 - That's it! You may go on the link given on the Terminal.
-- You may use the Admin Panel by going to the `/admin`, admin creds are `Username: admin, Password: admin`.
+- You may use the Admin Panel by going to the `/admin`, admin creds are `Username: admin, Password: admin` (recommended to be changed during deployment)
 
 ### How to Host on the LAN:
 - When you run the Server, use the following line: `python manage.py runserver <ipv4 address>:<port number>`
   - You may get your IPv4 address from Netowrks in your settings. Example: `192.168.0.107`. Make sure you're connected to a LAN network.
   - Port Number can be any number from `1024 to 65353`. We typically use `8000`.
 - Your final code may therefore look something like - `python manage.py runserver 192.168.0.107:8000`. Unless you encounter a fire-wall, this would host EduForAll on your Local Server. Any device on the LAN can now access the website using the same URL you entered viz. `192.168.0.107:8000`.
+
+### Features:
+- **Tests**
+  - Solve Chapter-based MCQ Tests to practice the necessary concepts.
+  - Search for the tests based on your Medium, Board, Grade and Subject.
+- **Resources**
+  - Fetch the Textbooks by Medium, Board and Grade.
+  - You may choose to read or download on your device.
+- **Forum**
+  - Ask any Doubts or help to get other students' doubts cleared.
+  - You need to Register/Login for the same, so as to maintain the data of the answerer.
+
+### Stack Used:
