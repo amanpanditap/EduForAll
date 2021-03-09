@@ -99,6 +99,8 @@ class addQuestion(View):
 class myQuestions(View):
 
     def get(self,request,template_name='myQuestions.html'):
+        if request.user.is_anonymous:
+            return redirect('Login')
         message = {}
         stud = student.objects.filter(user=request.user)
         stud = stud[0]
