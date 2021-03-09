@@ -61,7 +61,7 @@
                             <label for="body" class="form-label-group">Your Answer</label>
                             <textarea id="body" name="body" rows="10" cols="100"  type="text" class="form-control" required style="border-radius: 20px; font-size: 14px;">
                             </textarea><br>                          
-                            <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" style="font-size: 1rem;">Add Answer</button>
+                            <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" name="addAnswer" style="font-size: 1rem;">Add Answer</button>
                             
                         </form>
                 </div>
@@ -88,20 +88,23 @@
                     <p>{{i.body}}</p>
                     <footer class="blockquote-footer">Answered By <cite
                             title="Source Title">{{ i.answerBy.user.first_name}}</cite> on {{i.created}}
-                        {% if i.isVerified %}
+                        {% if i.isCorrect %}
                         &nbsp;&nbsp;&nbsp; <span style="color: green; font-style: italic"><strong>(Verified)</strong></span>
                         {% endif %}
                         </footer>
-                
+                        {% for group_for in request.user.groups.all %}
+                        {% if group_for.name == 'teacher_group' %}
                             <form action="" method="post">
                                 {% csrf_token %}
                                 <div class="form-check">
                                     <input type="hidden" name="answerID" value="{{i.id}}">
-                                  <input type="checkbox" class="form-check-input" id="exampleCheck1" name="verifyAnswer">
+                                  <input type="checkbox" class="form-check-input" id="exampleCheck1" name="verifyAnswer" value="true">
                                   <label class="form-check-label" for="exampleCheck1" style="font-size:1rem">Verify This Answer?</label>
                                 </div>
-                                <button type="submit" class="btn btn-primary btn-sm">Confirm</button>
+                                <button type="submit" name= "verifyAnswerPost" class="btn btn-primary btn-sm">Confirm</button>
                               </form>
+                        {% endif %}
+                    {% endfor %}
                 </blockquote>
             </div>
         </div>

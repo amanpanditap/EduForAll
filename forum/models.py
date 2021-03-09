@@ -9,6 +9,7 @@ class student(models.Model):
     medium = models.CharField(max_length=100)
     board = models.CharField(max_length=100, default="SSC")
 
+
 class question(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     questionBy = models.ForeignKey(student, on_delete=models.CASCADE)
@@ -21,12 +22,14 @@ class question(models.Model):
 
     def __str__(self):
         return self.title
-    
+
+
 class answer(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     whichQuestion = models.ForeignKey(question, on_delete=models.CASCADE)
     answerBy = models.ForeignKey(student, on_delete=models.CASCADE)
     body = models.CharField(max_length=30000)
+    isCorrect = models.BooleanField(default=False)
 
     def __str__(self):
-        return self.whichQuestion.title+": "+self.answerBy.user.first_name+" "+self.answerBy.user.last_name
+        return self.whichQuestion.title + ": " + self.answerBy.user.first_name + " " + self.answerBy.user.last_name
