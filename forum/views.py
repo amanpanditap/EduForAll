@@ -39,7 +39,7 @@ class queAns(View):
         Question = Question[0]
         message['question'] = Question
         answers = answer.objects.filter(whichQuestion=Question)
-        answers = answers.order_by('-created')
+        answers = answers.order_by('-isCorrect', '-created')
         message['answers'] = answers
         return render(request, template_name, message)
 
