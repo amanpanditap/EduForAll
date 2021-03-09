@@ -16,7 +16,9 @@
     <br>
     <br>
     <br>
+    {% if user.is_anonymous is False %}
     <a class="btn btn-primary btn-lg float-right" href="#answers" role="button">View Answers</a>
+    {% endif %}
     <br>
     
     <h4 style="color:#3f6ad8">{{error_message}}</h4>
@@ -41,6 +43,7 @@
     <br>
 </div>
 
+{% if user.is_anonymous is False %}
 <div class="container">
     <div class="row">
         <div class="mx-auto d-block float-left">
@@ -64,7 +67,11 @@
         </div>
     </div>
 </div>
-
+{% else %}
+<div class="container">
+<p style="font-size:1rem; color: #381919;">Please <a href="{% url 'Login' %}" style="color: blue">Login</a> to add your Answer</p>
+</div>
+{% endif %}
 <div class="container-fluid" id="answers">
 <br>
 <br>
