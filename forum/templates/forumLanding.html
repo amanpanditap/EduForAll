@@ -13,9 +13,11 @@
     <br>
     <br>
     <br>
-    <a class="btn btn-primary btn-lg float-right" href="{% url 'forum:addQuestion' %}" role="button">Add a Question</a>
+    <a class="btn btn-primary btn-sm float-right" style="margin-right: 16px; margin-bottom: 16px" href="{% url 'forum:myQuestions' %}" role="button">My Questions</a>
+    <a class="btn btn-primary btn-sm float-right" style="margin-right: 16px; margin-bottom: 16px" href="{% url 'forum:addQuestion' %}" role="button">Add a Question</a>
     <br>
-    <h3>{{error_message}}</h3>
+    <br>
+    <h4>{{error_message}}</h4>
     <br>
 <br>
     <div class="container-fluid" style="padding: 10px; border: 2px solid; border-radius: 20px;">
@@ -76,7 +78,7 @@
     </div>
 <br><br>
     {% if questions %}
-    <h1 style="color: #312b26;">Questions:</h1>
+    <h2 style="color: #312b26;">Questions:</h2>
     <br>
 </div>
 
@@ -84,11 +86,11 @@
     {% for i in questions %}
     <a href="{% url 'forum:queAns' i.id %}">
         <div class="card" style="background-color: #c2e1ff; color: #1a1111;">
-            <div class="card-header" style="font-size:1.6rem; background-color: #9adffa; color: #312b26">
-                {{i.title}}
+            <div class="card-header" style="font-size:1rem; background-color: #9adffa; color: #312b26">
+             <strong>{{i.title}}</strong>
             </div>
             <div class="card-body">
-                <blockquote class="blockquote mb-0">
+                <blockquote class="blockquote mb-0" style="font-size:1rem">
                     <p>{{i.body}}</p>
                     <footer class="blockquote-footer">Asked By <cite
                             title="Source Title">{{ i.questionBy.user.first_name }}</cite></footer>

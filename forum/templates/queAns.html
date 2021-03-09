@@ -32,12 +32,14 @@
     <a class="btn btn-primary btn-sm float-left" style="margin-right: 16px; margin-bottom: 16px"  href="" role="button">{{question.medium}}</a>
     <a class="btn btn-primary btn-sm float-left" style="margin-right: 16px; margin-bottom: 16px"  href="" role="button">{{question.acadYear}}</a>
     <a class="btn btn-primary btn-sm float-left" style="margin-right: 16px; margin-bottom: 16px"  href="" role="button">{{question.subject}}</a>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 </div>
 
 <div class="container-fluid">
-<br>
-<br>
-<br>
     <h4 style="color: #312b26;">{{question.title}}</h4>
     <h6 style="color: #312b26;">{{question.body}}</h6>
     <br>
@@ -59,7 +61,7 @@
                             <label for="body" class="form-label-group">Your Answer</label>
                             <textarea id="body" name="body" rows="10" cols="100"  type="text" class="form-control" required style="border-radius: 20px; font-size: 14px;">
                             </textarea><br>                          
-                            <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" style="font-size: 1rem;">Add Answer</button>
+                            <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" name="addAnswer" style="font-size: 1rem;">Add Answer</button>
                             
                         </form>
                 </div>
@@ -82,24 +84,27 @@
                 {{i.body}}
             </div>-->
             <div class="card-body">
-                <blockquote class="blockquote mb-0">
+                <blockquote class="blockquote mb-0"  style="font-size:1rem">
                     <p>{{i.body}}</p>
                     <footer class="blockquote-footer">Answered By <cite
                             title="Source Title">{{ i.answerBy.user.first_name}}</cite> on {{i.created}}
-                        {% if i.isVerified %}
+                        {% if i.isCorrect %}
                         &nbsp;&nbsp;&nbsp; <span style="color: green; font-style: italic"><strong>(Verified)</strong></span>
                         {% endif %}
                         </footer>
-                
+                        {% for group_for in request.user.groups.all %}
+                        {% if group_for.name == 'teacher_group' %}
                             <form action="" method="post">
                                 {% csrf_token %}
                                 <div class="form-check">
                                     <input type="hidden" name="answerID" value="{{i.id}}">
-                                  <input type="checkbox" class="form-check-input" id="exampleCheck1" name="verifyAnswer">
+                                  <input type="checkbox" class="form-check-input" id="exampleCheck1" name="verifyAnswer" value="true">
                                   <label class="form-check-label" for="exampleCheck1" style="font-size:1rem">Verify This Answer?</label>
                                 </div>
-                                <button type="submit" class="btn btn-primary btn-sm">Confirm</button>
+                                <button type="submit" name= "verifyAnswerPost" class="btn btn-primary btn-sm">Confirm</button>
                               </form>
+                        {% endif %}
+                    {% endfor %}
                 </blockquote>
             </div>
         </div>
