@@ -1,5 +1,5 @@
 [{
-    "question_string": "___________ wrote the book entitled, 'Archaeologyof Knowldege'.",
+    "question_string": "___________ wrote the book entitled, 'Archaeology of Knowldege'.",
     "choices": {
       "correct": "Michel Foucault",
       "wrong": ["Voltaire", "Karl Marx", "Lucien Febvre"]
