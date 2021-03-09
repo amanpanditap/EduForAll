@@ -85,7 +85,21 @@
                 <blockquote class="blockquote mb-0">
                     <p>{{i.body}}</p>
                     <footer class="blockquote-footer">Answered By <cite
-                            title="Source Title">{{ i.answerBy.user.first_name}}</cite> on {{i.created}}</footer>
+                            title="Source Title">{{ i.answerBy.user.first_name}}</cite> on {{i.created}}
+                        {% if i.isVerified %}
+                        &nbsp;&nbsp;&nbsp; <span style="color: green; font-style: italic"><strong>(Verified)</strong></span>
+                        {% endif %}
+                        </footer>
+                
+                            <form action="" method="post">
+                                {% csrf_token %}
+                                <div class="form-check">
+                                    <input type="hidden" name="answerID" value="{{i.id}}">
+                                  <input type="checkbox" class="form-check-input" id="exampleCheck1" name="verifyAnswer">
+                                  <label class="form-check-label" for="exampleCheck1" style="font-size:1rem">Verify This Answer?</label>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-sm">Confirm</button>
+                              </form>
                 </blockquote>
             </div>
         </div>
