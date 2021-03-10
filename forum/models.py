@@ -8,6 +8,9 @@ class student(models.Model):
     acadYear = models.CharField(max_length=100)
     medium = models.CharField(max_length=100)
     board = models.CharField(max_length=100, default="SSC")
+    
+    def __str__(self):
+        return self.user.first_name +" "+ self.user.last_name
 
 
 class question(models.Model):
