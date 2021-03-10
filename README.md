@@ -38,7 +38,7 @@
 - **Database** - SQLite.
 - **Frontend**- HTML, CSS, JS, jQuery, Bootstrap.
 
-**Do watch the Video for all the explanation, working and flow:** https://youtu.be/us9VEqRAULI 
+### Do watch the Video for all the explanation, working and flow: https://youtu.be/us9VEqRAULI 
 
 
 ### Get in Touch
