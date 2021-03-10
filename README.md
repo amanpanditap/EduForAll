@@ -41,7 +41,7 @@
 ### Do watch the Video for all the explanation, working and flow: https://youtu.be/us9VEqRAULI 
 
 ### Check out the Implementation:<br/>
-<img src="result.jpg" height = 400 width = 800>
+<img src="demo.jpg" height = 400 width = 800>
 
 
 ### Get in Touch
