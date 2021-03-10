@@ -23,12 +23,15 @@
 - **Tests**
   - Solve Chapter-based MCQ Tests to practice the necessary concepts.
   - Search for the tests based on your Medium, Board, Grade and Subject.
+  - **Note:** For Demo purposes, Tests are added for only 10th Standard, SSC board, English Medium and 1st chapter of each subject.
 - **Syllabus**
   - Fetch the Textbooks by Medium, Board and Grade.
   - You may choose to read or download on your device.
+  - **Note:** For Demo purposes, Syllabus are added for only 10th Standard, English Hindi Marathi Medium of SSC Board.
 - **Forum**
   - Ask any Doubts or help to get other students' doubts cleared.
   - You need to Register/Login for the same, so as to maintain the data of the answerer.
+  - **Note:** Users must not violate the basic code of conduct for discussing in forum.
 
 ### Stack Used:
 - **Backend** - Python, Django.
@@ -39,6 +42,6 @@
 - *Team Rational Rulers*
   - **Veerja Kadam** - <a href="https://github.com/veerja-kadam">GitHub</a> | <a href="https://www.linkedin.com/in/veerja-kadam-ba23a316a/">LinkedIn</a>
   - **Aman Pandit** - <a href="https://github.com/amanpanditap">GitHub</a> | <a href="https://www.linkedin.com/in/amanpanditwce/">LinkedIn</a>
-  - **Vatsala Singh** - <a href="mailto:@Vatsalasingh2212@gmail.com">Email</a> | <a href="https://www.instagram.com/tempest_steel_vatsala/">Instagram</a>
+  - **Vatsala Singh** - <a href="https://www.linkedin.com/in/vatsala-singh-a00207209/">LinkedIn</a> | <a href="https://www.instagram.com/tempest_steel_vatsala/">Instagram</a>
   - **Vaishnavi Mahajan** - <a href="https://github.com/VaishnaviM411">GitHub</a> | <a href="https://www.linkedin.com/in/vaishnavi-mahajan-a191121a5/">LinkedIn</a>
   - **Devang Kamble** - <a href="https://github.com/rising-entropy">GitHub</a> | <a href="https://www.linkedin.com/in/devang-kamble/">LinkedIn</a>
