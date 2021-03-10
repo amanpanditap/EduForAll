@@ -38,6 +38,9 @@
 - **Database** - SQLite.
 - **Frontend**- HTML, CSS, JS, jQuery, Bootstrap.
 
+**Do watch the Video for all the explanation, working and flow:** https://youtu.be/us9VEqRAULI 
+
+
 ### Get in Touch
 - *Team Rational Rulers*
   - **Veerja Kadam** - <a href="https://github.com/veerja-kadam">GitHub</a> | <a href="https://www.linkedin.com/in/veerja-kadam-ba23a316a/">LinkedIn</a>
